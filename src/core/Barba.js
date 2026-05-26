@@ -38,6 +38,10 @@ export function bootstrap ({
         }
       }
 
+      // Clear selection
+      window.getSelection()?.empty?.() ?? window.getSelection()?.removeAllRanges?.() ?? document.selection?.empty()
+
+      // Callback
       afterEnter(next)
 
       // Flag document as ready
