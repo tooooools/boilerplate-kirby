@@ -3,6 +3,7 @@
 /.env
 node_modules/
 .vscode
+composer.lock
 
 # Kirby subfolder contents
 /content/cover.png*
