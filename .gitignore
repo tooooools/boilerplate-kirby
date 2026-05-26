@@ -3,7 +3,6 @@
 /.env
 node_modules/
 .vscode
-/site/config/vite.config.php
 
 # Kirby subfolder contents
 /content/cover.png*

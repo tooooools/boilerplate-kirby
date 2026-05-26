@@ -53,9 +53,7 @@ Some directories are not under version control. Deployment for those directories
 ```
 ├── content
 ├── kirby
-├── public
 ├── site
-│ ├── config/vite.config.php
 │ └── plugins/*
 ├── storage
 └── vendor
