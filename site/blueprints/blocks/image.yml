@@ -1,0 +1,19 @@
+name: field.blocks.image.name
+icon: image
+preview: image
+fields:
+  image:
+    label: field.blocks.image.name
+    type: files
+    query: model.images
+    multiple: false
+    image:
+      back: black
+    uploads:
+      template: blocks/image
+
+  caption:
+    label: field.blocks.image.caption
+    type: writer
+    icon: text
+    inline: true
