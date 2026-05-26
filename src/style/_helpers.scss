@@ -72,14 +72,17 @@
 /*
   Expand a block hitbox, ie to simplify touch interaction
 
-  div::after {
+  div {
     @include hitbox(3rem);
+    @include hitbox(3rem, after);
   }
 */
-@mixin hitbox ($expand: 1rem) {
-  content: '';
-  position: absolute;
-  inset: calc(-1 * $expand);
+@mixin hitbox ($expand: 1rem, $pseudo: before) {
+  &::#{$pseudo} {
+    content: '';
+    position: absolute;
+    inset: calc(-1 * $expand);
+  }
 }
 
 /*
