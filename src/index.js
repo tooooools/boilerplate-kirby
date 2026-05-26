@@ -26,7 +26,9 @@ import mediaReady from '/utils/media-ready'
         await mediaReady(el)
         el.classList.add('is-loaded')
       }))
+    },
 
+    after: next => {
       // Reset scroll position, handling url hash
       if (next?.url.hash) next.container.querySelector('#' + next.url.hash)?.scrollIntoView()
       else window.scrollTo({ top: 0, left: 0, behavior: 'instant' })

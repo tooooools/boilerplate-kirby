@@ -6,7 +6,8 @@ import noop from '/utils/noop'
 export function bootstrap ({
   views = [],
   components = { global: [], local: [] },
-  afterEnter = noop
+  afterEnter = noop,
+  after = noop
 } = {}) {
   Barba.use(prefetch)
   Barba.init({
@@ -46,6 +47,14 @@ export function bootstrap ({
 
       // Flag document as ready
       document.body.classList.add('is-ready')
+    } catch (e) {
+      console.error(e)
+    }
+  })
+
+  Barba.hooks.after(({ next }) => {
+    try {
+      after(next)
     } catch (e) {
       console.error(e)
     }
