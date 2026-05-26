@@ -11,6 +11,7 @@ export function bootstrap ({
 } = {}) {
   Barba.use(prefetch)
   Barba.init({
+    debug: import.meta.env.DEV,
     prevent: ({ el }) => el?.classList?.contains('no-barba'),
     views: views.map(view => view.default),
     transitions: [{
