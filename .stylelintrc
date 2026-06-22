@@ -19,18 +19,21 @@
     "scss/at-function-parentheses-space-before": false,
 
     "order/order": [
-      { "type": "at-rule" },
+      { "type": "at-rule", "name": "use" },
+      { "type": "at-rule", "name": "import" },
       { "type": "at-rule", "name": "mixin" },
+      { "type": "at-rule", "name": "function" },
       { "type": "at-rule", "name": "extend" },
       { "type": "at-rule", "name": "include", "hasBlock": false },
       "dollar-variables",
       "custom-properties",
       "declarations",
-      { "type": "at-rule", "hasBlock": true },
+      { "type": "at-rule", "name": "font-face" },
+      { "type": "at-rule", "name": "keyframes" },
+      { "type": "at-rule", "name": "at-root" },
+      { "type": "at-rule", "name": "content" },
       { "type": "at-rule", "name": "media" },
       { "type": "at-rule", "name": "include", "hasBlock": true },
-      { "type": "at-rule", "name": "if" },
-      { "type": "at-rule", "name": "else" },
       "rules",
       { "type": "at-rule", "name": "return" }
     ],
@@ -47,7 +50,7 @@
           "groupName": "Box model",
           "noEmptyLineBetween": true,
           "emptyLineBefore": "threshold",
-          "properties": ["display", "flex-direction", "flex-wrap", "justify-content", "align-items", "place-items", "grid-template-columns", "grid-template-rows", "gap", "float", "width", "height", "max-width", "max-height", "min-width", "min-height", "aspect-ratio", "padding", "padding-block", "padding-inline", "padding-top", "padding-right", "padding-bottom", "padding-left", "margin", "margin-block", "margin-inline", "margin-top", "margin-right", "margin-bottom", "margin-left", "margin-collapse", "margin-top-collapse", "margin-right-collapse", "margin-bottom-collapse", "margin-left-collapse", "overflow", "overflow-x", "overflow-y", "clip", "clear", "pointer-events", "cursor"]
+          "properties": ["display", "flex-direction", "flex-wrap", "justify-content", "align-items", "place-items", "grid-template-columns", "grid-template-rows", "gap", "float", "width", "height", "max-width", "max-height", "min-width", "min-height", "aspect-ratio", "padding", "padding-block", "padding-inline", "padding-top", "padding-right", "padding-bottom", "padding-left", "margin", "margin-block", "margin-inline", "margin-top", "margin-right", "margin-bottom", "margin-left", "margin-collapse", "margin-top-collapse", "margin-right-collapse", "margin-bottom-collapse", "margin-left-collapse", "overflow", "overflow-x", "overflow-y", "clip", "clear", "contain", "pointer-events", "cursor"]
         },
         {
           "groupName": "Typography",
@@ -59,7 +62,7 @@
           "groupName": "Cosmetics",
           "noEmptyLineBetween": true,
           "emptyLineBefore": "threshold",
-          "properties": ["background", "background-attachment", "background-color", "background-image", "background-position", "background-repeat", "background-size", "border", "border-collapse", "border-top", "border-right", "border-bottom", "border-left", "border-color", "border-image", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color", "border-spacing", "border-style", "border-top-style", "border-right-style", "border-bottom-style", "border-left-style", "border-width", "border-top-width", "border-right-width", "border-bottom-width", "border-left-width", "border-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius", "border-top-left-radius", "border-radius-topright", "border-radius-bottomright", "border-radius-bottomleft", "border-radius-topleft", "quotes", "outline", "outline-offset", "opacity", "filter", "transform-origin", "transform", "backdrop-filter", "visibility", "size", "zoom", "box-align", "box-flex", "box-orient", "box-pack", "box-shadow", "box-sizing", "table-layout", "animation", "animation-delay", "animation-duration", "animation-iteration-count", "animation-name", "animation-play-state", "animation-timing-function", "animation-fill-mode", "transition", "transition-delay", "transition-duration", "transition-property", "transition-timing-function", "background-clip", "backface-visibility", "resize", "appearance", "user-select"]
+          "properties": ["background", "background-attachment", "background-color", "background-image", "background-position", "background-repeat", "background-size", "border", "border-collapse", "border-top", "border-right", "border-bottom", "border-left", "border-color", "border-image", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color", "border-spacing", "border-style", "border-top-style", "border-right-style", "border-bottom-style", "border-left-style", "border-width", "border-top-width", "border-right-width", "border-bottom-width", "border-left-width", "border-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius", "border-top-left-radius", "border-radius-topright", "border-radius-bottomright", "border-radius-bottomleft", "border-radius-topleft", "quotes", "outline", "outline-offset", "opacity", "filter", "transform-origin", "transform", "will-change", "backdrop-filter", "visibility", "size", "zoom", "box-align", "box-flex", "box-orient", "box-pack", "box-shadow", "box-sizing", "table-layout", "animation", "animation-delay", "animation-duration", "animation-iteration-count", "animation-name", "animation-play-state", "animation-timing-function", "animation-fill-mode", "transition", "transition-delay", "transition-duration", "transition-property", "transition-timing-function", "background-clip", "backface-visibility", "resize", "appearance", "user-select"]
         }
       ],
       {
