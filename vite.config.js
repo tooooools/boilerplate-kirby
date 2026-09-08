@@ -53,6 +53,7 @@ export default ({ mode }) => ({
         '../site/blueprints/**/*.yml',
         '../site/(templates|snippets|controllers|config|models|languages|layouts)/**/*.php',
         // '../content/**/*.txt'
+        // '!../content/**/_changes/**'
       ]
     }),
     VitePluginBrowserSync({
