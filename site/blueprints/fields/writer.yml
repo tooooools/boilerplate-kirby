@@ -1,6 +1,10 @@
 label: Texte
 type: writer
 
+headings:
+  - 2
+  - 3
+
 toolbar:
   inline: false
   marks:
@@ -11,7 +15,9 @@ toolbar:
     - email
     - '|'
     - clear
-  nodes:
-    - paragraph
-    - bulletList
-    - orderedList
+
+nodes:
+  - heading
+  - paragraph
+  - bulletList
+  - orderedList
