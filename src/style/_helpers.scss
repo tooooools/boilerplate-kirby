@@ -17,8 +17,14 @@
   selector {
     @include font(namespace);
   }
+
+  :root {
+    @include font(body, title);
+    // --title will inherit all --body
+    --title-font-size: 10vw;
+  }
 */
-@mixin font ($namespace) {
+@mixin font ($namespace, $namespace2: false) {
   @each $prop, $default in (
     'font-family': inherit,
     'font-size': inherit,
@@ -27,6 +33,7 @@
     'font-synthesis': none,
     'font-feature-settings': initial,
     'font-variant': none,
+    'font-variant-numeric': none,
     'font-kerning': auto,
     'line-height': inherit,
     'text-transform': none,
@@ -36,7 +43,11 @@
     'letter-spacing': normal,
     'font-variation-settings': initial
   ) {
-    #{$prop}: var(--#{$namespace}-#{$prop}, $default);
+    @if $namespace2 {
+      --#{$namespace2}-#{$prop}: var(--#{$namespace}-#{$prop}, $default);
+    } @else {
+      #{$prop}: var(--#{$namespace}-#{$prop}, $default);
+    }
   }
 }
 
@@ -133,14 +144,11 @@
   -ms-overflow-style: none;
 
   @if $direction == x {
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: scroll hidden;
   } @else if $direction == y {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-x: hidden scroll;
   } @else {
-    overflow-x: scroll;
-    overflow-y: scroll;
+    overflow-x: scroll scroll;
   }
 
   &::-webkit-scrollbar {
