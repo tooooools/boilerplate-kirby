@@ -12,7 +12,7 @@
     "build": "vite build",
     "preview": "npm run build && npm run server",
     "version": "npm run build && git add -f public/dist",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --follow-tags"
   },
   "engines": {
     "node": ">=18.0.0"
